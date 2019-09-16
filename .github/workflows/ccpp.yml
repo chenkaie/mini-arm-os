@@ -10,10 +10,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: configure
-      run: ./configure --disable-werror --enable-debug \
-    --target-list="arm-softmmu" \
-    --extra-cflags=-DSTM32_UART_NO_BAUD_DELAY \
-    --extra-cflags=-DSTM32_UART_ENABLE_OVERRUN \
+      run: ./configure --disable-werror --enable-debug
+    --target-list="arm-softmmu"
+    --extra-cflags=-DSTM32_UART_NO_BAUD_DELAY
+    --extra-cflags=-DSTM32_UART_ENABLE_OVERRUN
     --disable-gtk
     - name: make
       run: make
